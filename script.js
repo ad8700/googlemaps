@@ -1,7 +1,7 @@
 function initMap() {
 		var location = {lat: 32.877955, lng: -96.933399};
 		var map = new google.maps.Map(document.getElementById("map"), {
-			zoom: 13,
+			zoom: 8,
 			center: location
 		});
 		
@@ -15,56 +15,64 @@ function initMap() {
 
 	var address2 = {
 		info: '664 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
-		TV Available = Y<br> Phone Available = Y<br>',
+		TV Available = Y<br> Phone Available = Y<br> In Service = N',
 		lat: 32.877979,
 		long:-96.933168
 	}
 
 	var address3 = {
 		info: '668 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
-		TV Available = Y<br> Phone Available = Y<br>',
+		TV Available = Y<br> Phone Available = Y<br> In Service = Y<br> Account # = 54320<br> Internet product = 1G<br>\
+		TV product = 300 channels<br> Phone product = None',
 		lat: 32.877864,
 		long:-96.932996
 	}
 	
 	var address4 = {
 		info: '672 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
-		TV Available = Y<br> Phone Available = Y<br>',
+		TV Available = Y<br> Phone Available = Y<br>In Service = Y<br> Account # = 54319<br> Internet product = 1G<br>\
+		TV product = None<br> Phone product = None',
 		lat: 32.877853,
 		long:-96.932829
 	}
 	var address5 = {
 		info: '676 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
-		TV Available = Y<br> Phone Available = Y<br>',
+		TV Available = Y<br> Phone Available = Y<br>in Service = N',
 		lat: 32.877824,
 		long:-96.93259
 	}
 	var address6 = {
 		info: '680 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
-		TV Available = Y<br> Phone Available = Y<br>',
+		TV Available = Y<br> Phone Available = Y<br> In Service = N',
 		lat: 32.877738,
 		long:-96.932367
 	}
 	var address7 = {
 		info: '684 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
-		TV Available = Y<br> Phone Available = Y<br>',
+		TV Available = Y<br> Phone Available = Y<br>In Service = Y<br> Account # = 54318<br> Internet product = 300MB<br>\
+		TV product = 100 channels<br> Phone product = None',
 		lat: 32.877702,
 		long:-96.932166
 	}	
 	var address8 = {
 		info: '663 Flagstone Dr<br> Irving, TX 75039,<br> Internet Available = N,<br> Max Internet Speed = 0<br> \
-		TV Available = N<br> Phone Available = N<br>',
+		TV Available = N<br> Phone Available = N<br>In Service = N',
 		lat: 32.877673,
 		long:-96.933376
+	}	
+	var address9 = {
+		info: '667 Flagstone Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>In Service = N',
+		lat: 32.877599,
+		long:-96.933202
 	}	
 
 	var blueLocations = [
 		[address2.info, address2.lat, address2.long, 0],
-		[address3.info, address3.lat, address3.long, 0],
-		[address4.info, address4.lat, address4.long, 0],
 		[address5.info, address5.lat, address5.long, 0],
 		[address6.info, address6.lat, address6.long, 0],
-		[address7.info, address7.lat, address7.long, 0]
+		[address7.info, address7.lat, address7.long, 0],
+		[address9.info, address9.lat, address9.long, 0]
     ];
 
 	var redLocations = [
@@ -72,7 +80,9 @@ function initMap() {
 	]
 
 	var greenLocations = [
-		[address1.info, address1.lat, address1.long, 0]
+		[address1.info, address1.lat, address1.long, 0],
+		[address3.info, address3.lat, address3.long, 0],
+		[address4.info, address4.lat, address4.long, 0]
 	]
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
