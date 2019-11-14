@@ -1,7 +1,7 @@
 function initMap() {
 		var location = {lat: 32.877955, lng: -96.933399};
 		var map = new google.maps.Map(document.getElementById("map"), {
-			zoom: 20,
+			zoom: 15,
 			center: location
 		});
 /*		var marker = new google.maps.Marker({
@@ -60,7 +60,7 @@ function initMap() {
     ];
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 20,
+		zoom: 15,
 		center: new google.maps.LatLng(32.877506, -96.932352),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
