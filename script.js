@@ -1,5 +1,14 @@
 function initMap() {
-
+		var location = {lat: 32.877955, lng: -96.933399};
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 18,
+			center: location
+		});
+		var marker = new google.maps.Marker({
+			position: location, 
+			map: map
+			})
+			
 	var address1 = {
 		info: '660 Waterbrook Dr<br> Irving, TX 75039',
 		lat: 32.877955,
