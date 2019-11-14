@@ -1,7 +1,7 @@
 function initMap() {
 		var location = {lat: 32.877955, lng: -96.933399};
 		var map = new google.maps.Map(document.getElementById("map"), {
-			zoom: 18,
+			zoom: 20,
 			center: location
 		});
 /*		var marker = new google.maps.Marker({
@@ -29,7 +29,12 @@ function initMap() {
 		long: -96.933399
 	};
 
-	var address2
+	var address2 = {
+		info: '664 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>',
+		lat: 32.877979,
+		long:-96.933168
+	}
 
 /*	var belmont = {
 		info: '<strong>Chipotle on Belmont</strong><br>\
@@ -49,12 +54,13 @@ function initMap() {
 */
 	var locations = [
       [address1.info, address1.lat, address1.long, 0],
+		[address2.info, address2.lat, address2.long, 0]
 /*      [belmont.info, belmont.lat, belmont.long, 1],
       [sheridan.info, sheridan.lat, sheridan.long, 2],*/
     ];
 
 	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 13,
+		zoom: 20,
 		center: new google.maps.LatLng(32.877506, -96.932352),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
