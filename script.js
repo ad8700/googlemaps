@@ -57,7 +57,7 @@ function initMap() {
 		long:-96.932166
 	}	
 
-	var blueLocations = [
+	var locations = [
       [address1.info, address1.lat, address1.long, 0],
 		[address2.info, address2.lat, address2.long, 0]
 		[address3.info, address3.lat, address3.long, 0]
@@ -67,7 +67,7 @@ function initMap() {
 		[address7.info, address7.lat, address7.long, 0]
     ];
 
-	var redLocations = [
+/*	var redLocations = [
 		[address8.info, address8.lat, address8.long, 0]	
 	]
 
@@ -75,15 +75,15 @@ function initMap() {
 		zoom: 15,
 		center: new google.maps.LatLng(32.877506, -96.932352),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
-	});
+	});*/
 
 	var infowindow = new google.maps.InfoWindow({});
 
-	var blueMarker, i;
+	var marker, i;
 
-	for (i = 0; i < blueLocations.length; i++) {
-		blueMarker = new google.maps.Marker({
-			position: new google.maps.LatLng(blueLocations[i][1], blueLocations[i][2]),
+	for (i = 0; i < locations.length; i++) {
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 		    icon: {
 		        path: google.maps.SymbolPath.CIRCLE,
 		        fillColor: '#00F',
@@ -95,15 +95,15 @@ function initMap() {
 			map: map
 		});
 
-		google.maps.event.addListener(blueMarker, 'click', (function (blueMarker, i) {
+		google.maps.event.addListener(marker, 'click', (function (marker, i) {
 			return function () {
-				infowindow.setContent(blueLocations[i][0]);
-				infowindow.open(map, blueMarker);
+				infowindow.setContent(locations[i][0]);
+				infowindow.open(map, marker);
 			}
 		})(marker, i));
 	}
 	
-	var redMarker, i;
+/*	var redMarker, i;
 
 	for (i = 0; i < redLocations.length; i++) {
 		blueMarker = new google.maps.Marker({
@@ -125,7 +125,7 @@ function initMap() {
 				infowindow.open(map, redMarker);
 			}
 		})(marker, i));
-	}
+	}*/
 }
 
 /*depricated code*/
