@@ -1,14 +1,13 @@
 function initMap() {
 
-	var broadway = {
-		info: '<strong>Chipotle on Broadway</strong><br>\
-					5224 N Broadway St<br> Chicago, IL 60640<br>\
-					<a href="https://goo.gl/maps/jKNEDz4SyyH2">Get Directions</a>',
-		lat: 41.976816,
-		long: -87.659916
+	var address1 = {
+		info: '660 Waterbrook Dr<br> Irving, TX 75039',
+		lat: 32.877955,
+		long: -96.933399
 	};
 
-	var belmont = {
+
+/*	var belmont = {
 		info: '<strong>Chipotle on Belmont</strong><br>\
 					1025 W Belmont Ave<br> Chicago, IL 60657<br>\
 					<a href="https://goo.gl/maps/PHfsWTvgKa92">Get Directions</a>',
@@ -23,16 +22,16 @@ function initMap() {
 		lat: 42.002707,
 		long: -87.661236
 	};
-
+*/
 	var locations = [
-      [broadway.info, broadway.lat, broadway.long, 0],
-      [belmont.info, belmont.lat, belmont.long, 1],
-      [sheridan.info, sheridan.lat, sheridan.long, 2],
+      [address1.info, address1.lat, address1.long, 0],
+/*      [belmont.info, belmont.lat, belmont.long, 1],
+      [sheridan.info, sheridan.lat, sheridan.long, 2],*/
     ];
 
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 13,
-		center: new google.maps.LatLng(41.976816, -87.659916),
+		center: new google.maps.LatLng(32.877506, -96.932352),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
 
