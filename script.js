@@ -4,17 +4,32 @@ function initMap() {
 			zoom: 18,
 			center: location
 		});
-		var marker = new google.maps.Marker({
+/*		var marker = new google.maps.Marker({
 			position: location, 
 			map: map
-			})
+			})*/
+		var marker = new google.maps.Marker({
+    		map: map,
+    		position: map.getCenter(),
+		    icon: {
+		        path: google.maps.SymbolPath.CIRCLE,
+		        fillColor: '#00F',
+		        fillOpacity: 0.6,
+		        strokeColor: '#00A',
+		        strokeOpacity: 0.9,
+		        strokeWeight: 1,
+		        scale: 7
+    }
+});
 			
 	var address1 = {
-		info: '660 Waterbrook Dr<br> Irving, TX 75039',
+		info: '660 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>',
 		lat: 32.877955,
 		long: -96.933399
 	};
 
+	var address2
 
 /*	var belmont = {
 		info: '<strong>Chipotle on Belmont</strong><br>\
