@@ -53,8 +53,8 @@ function initMap() {
 	var address8 = {
 		info: '663 Flagstone Dr<br> Irving, TX 75039,<br> Internet Available = N,<br> Max Internet Speed = 0<br> \
 		TV Available = N<br> Phone Available = N<br>',
-		lat: 32.877702,
-		long:-96.932166
+		lat: 32.877673,
+		long:-96.933376
 	}	
 
 	var blueLocations = [
