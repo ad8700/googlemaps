@@ -7,7 +7,8 @@ function initMap() {
 		
 	var address1 = {
 		info: '660 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
-		TV Available = Y<br> Phone Available = Y<br>',
+		TV Available = Y<br> Phone Available = Y<br> In Service = Y<br> Account # = 54321<br> Internet product = 1G<br>\
+		TV product = None<br> Phone product = None',
 		lat: 32.877955,
 		long: -96.933399
 	};
@@ -58,7 +59,6 @@ function initMap() {
 	}	
 
 	var blueLocations = [
-      [address1.info, address1.lat, address1.long, 0],
 		[address2.info, address2.lat, address2.long, 0],
 		[address3.info, address3.lat, address3.long, 0],
 		[address4.info, address4.lat, address4.long, 0],
@@ -71,6 +71,9 @@ function initMap() {
 		[address8.info, address8.lat, address8.long, 0]	
 	]
 
+	var greenLocations = [
+		[address1.info, address1.lat, address1.long, 0]
+	]
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
 		center: new google.maps.LatLng(32.877506, -96.932352),
@@ -112,7 +115,7 @@ function initMap() {
 		        path: google.maps.SymbolPath.CIRCLE,
 		        fillColor: '#FF0000',
 		        fillOpacity: 0.6,
-		        strokeColor: '#00A',
+		        strokeColor: '#FF000',
 		        strokeOpacity: 0.9,
 		        strokeWeight: 1,
 		        scale: 7},
@@ -125,6 +128,30 @@ function initMap() {
 				infowindow.open(map, redMarker);
 			}
 		})(redMarker, i));
+	}
+	
+	var greenMarker, i;
+
+	for (i = 0; i < greenLocations.length; i++) {
+		greenMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(greenLocations[i][1], greenLocations[i][2]),
+		    icon: {
+		        path: google.maps.SymbolPath.CIRCLE,
+		        fillColor: '#008000',
+		        fillOpacity: 0.6,
+		        strokeColor: '#008000',
+		        strokeOpacity: 0.9,
+		        strokeWeight: 1,
+		        scale: 7},
+			map: map
+		});
+
+		google.maps.event.addListener(greenMarker, 'click', (function (greenMarker, i) {
+			return function () {
+				infowindow.setContent(greenLocations[i][0]);
+				infowindow.open(map, greenMarker);
+			}
+		})(greenMarker, i));
 	}
 }
 
