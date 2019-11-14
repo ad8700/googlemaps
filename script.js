@@ -126,7 +126,7 @@ function initMap() {
 			}
 		})(marker, i));
 }
-
+}
 
 /*depricated code*/
 
