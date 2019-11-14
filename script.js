@@ -100,7 +100,7 @@ function initMap() {
 				infowindow.setContent(blueLocations[i][0]);
 				infowindow.open(map, blueMarker);
 			}
-		})(marker, i));
+		})(blueMarker, i));
 	}
 	
 	var redMarker, i;
@@ -124,7 +124,7 @@ function initMap() {
 				infowindow.setContent(redLocations[i][0]);
 				infowindow.open(map, redMarker);
 			}
-		})(marker, i));
+		})(redMarker, i));
 	}
 }
 
