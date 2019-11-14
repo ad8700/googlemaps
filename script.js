@@ -68,7 +68,7 @@ function initMap() {
     ];
 
 	var redLocations = [
-		[address8.info, address8.lat, address8.long, 0]
+		[address8.info, address8.lat, address8.long, 0]	
 	]
 
 	var map = new google.maps.Map(document.getElementById('map'), {
@@ -125,7 +125,7 @@ function initMap() {
 				infowindow.open(map, redMarker);
 			}
 		})(marker, i));
-}
+	}
 }
 
 /*depricated code*/
