@@ -59,11 +59,11 @@ function initMap() {
 
 	var locations = [
       [address1.info, address1.lat, address1.long, 0],
-		[address2.info, address2.lat, address2.long, 0]
-		[address3.info, address3.lat, address3.long, 0]
-		[address4.info, address4.lat, address4.long, 0]
-		[address5.info, address5.lat, address5.long, 0]
-		[address6.info, address6.lat, address6.long, 0]
+		[address2.info, address2.lat, address2.long, 0],
+		[address3.info, address3.lat, address3.long, 0],
+		[address4.info, address4.lat, address4.long, 0],
+		[address5.info, address5.lat, address5.long, 0],
+		[address6.info, address6.lat, address6.long, 0],
 		[address7.info, address7.lat, address7.long, 0]
     ];
 
