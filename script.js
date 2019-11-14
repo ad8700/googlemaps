@@ -19,12 +19,57 @@ function initMap() {
 		long:-96.933168
 	}
 
-	var locations = [
+	var address3 = {
+		info: '668 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>',
+		lat: 32.877864,
+		long:-96.932996
+	}
+	
+	var address4 = {
+		info: '672 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>',
+		lat: 32.877853,
+		long:-96.932829
+	}
+	var address5 = {
+		info: '676 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>',
+		lat: 32.877824,
+		long:-96.93259
+	}
+	var address6 = {
+		info: '680 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>',
+		lat: 32.877738,
+		long:-96.932367
+	}
+	var address7 = {
+		info: '684 Waterbrook Dr<br> Irving, TX 75039,<br> Internet Available = Y,<br> Max Internet Speed = 1000<br> \
+		TV Available = Y<br> Phone Available = Y<br>',
+		lat: 32.877702,
+		long:-96.932166
+	}	
+	var address8 = {
+		info: '663 Flagstone Dr<br> Irving, TX 75039,<br> Internet Available = N,<br> Max Internet Speed = 0<br> \
+		TV Available = N<br> Phone Available = N<br>',
+		lat: 32.877702,
+		long:-96.932166
+	}	
+
+	var blueLocations = [
       [address1.info, address1.lat, address1.long, 0],
 		[address2.info, address2.lat, address2.long, 0]
-/*      [belmont.info, belmont.lat, belmont.long, 1],
-      [sheridan.info, sheridan.lat, sheridan.long, 2],*/
+		[address3.info, address3.lat, address3.long, 0]
+		[address4.info, address4.lat, address4.long, 0]
+		[address5.info, address5.lat, address5.long, 0]
+		[address6.info, address6.lat, address6.long, 0]
+		[address7.info, address7.lat, address7.long, 0]
     ];
+
+	var redLocations = [
+		[address8.info, address8.lat, address8.long, 0]
+	]
 
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
@@ -34,11 +79,11 @@ function initMap() {
 
 	var infowindow = new google.maps.InfoWindow({});
 
-	var marker, i;
+	var blueMarker, i;
 
-	for (i = 0; i < locations.length; i++) {
-		marker = new google.maps.Marker({
-			position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+	for (i = 0; i < blueLocations.length; i++) {
+		blueMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(blueLocations[i][1], blueLocations[i][2]),
 		    icon: {
 		        path: google.maps.SymbolPath.CIRCLE,
 		        fillColor: '#00F',
@@ -50,13 +95,36 @@ function initMap() {
 			map: map
 		});
 
-		google.maps.event.addListener(marker, 'click', (function (marker, i) {
+		google.maps.event.addListener(blueMarker, 'click', (function (blueMarker, i) {
 			return function () {
-				infowindow.setContent(locations[i][0]);
-				infowindow.open(map, marker);
+				infowindow.setContent(blueLocations[i][0]);
+				infowindow.open(map, blueMarker);
 			}
 		})(marker, i));
 	}
+	
+	var redMarker, i;
+
+	for (i = 0; i < redLocations.length; i++) {
+		blueMarker = new google.maps.Marker({
+			position: new google.maps.LatLng(redLocations[i][1], redLocations[i][2]),
+		    icon: {
+		        path: google.maps.SymbolPath.CIRCLE,
+		        fillColor: '#FF0000',
+		        fillOpacity: 0.6,
+		        strokeColor: '#00A',
+		        strokeOpacity: 0.9,
+		        strokeWeight: 1,
+		        scale: 7},
+			map: map
+		});
+
+		google.maps.event.addListener(redMarker, 'click', (function (redMarker, i) {
+			return function () {
+				infowindow.setContent(redLocations[i][0]);
+				infowindow.open(map, redMarker);
+			}
+		})(marker, i));
 }
 
 
