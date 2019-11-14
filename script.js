@@ -82,7 +82,7 @@ function initMap() {
 	var blueMarker, i;
 
 	for (i = 0; i < blueLocations.length; i++) {
-		marker = new google.maps.Marker({
+		blueMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(blueLocations[i][1], blueLocations[i][2]),
 		    icon: {
 		        path: google.maps.SymbolPath.CIRCLE,
@@ -106,7 +106,7 @@ function initMap() {
 	var redMarker, i;
 
 	for (i = 0; i < redLocations.length; i++) {
-		blueMarker = new google.maps.Marker({
+		redMarker = new google.maps.Marker({
 			position: new google.maps.LatLng(redLocations[i][1], redLocations[i][2]),
 		    icon: {
 		        path: google.maps.SymbolPath.CIRCLE,
